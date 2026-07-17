@@ -16,14 +16,56 @@ async function seed() {
     await prisma.user.createMany({
         data: [
             {
-                name: "Alice",
-                email: "alice@example.com",
+                name: "Pedro",
+                email: "pedro@example.com",
+                age: 19,
+                isMarried: false,
+                nationality: "Brazilian",
             },
             {
-                name: "Bob",
-                email: "bob123@google.com",
+                name: "Alice",
+                email: "alice456@google.com",
+                age: 28,
+                isMarried: true,
+                nationality: "American",
+            },
+            {
+                name: "Maksim",
+                email: "maksim@example.com",
+                age: 31,
+                isMarried: false,
+                nationality: "Russian",
+            },
+            {
+                name: "Sofia",
+                email: "sofia@example.com",
+                age: 24,
+                isMarried: true,
+                nationality: "Ukrainian",
+            },
+            {
+                name: "Liam",
+                email: "liam@example.com",
+                age: 27,
+                isMarried: false,
+                nationality: "Canadian",
+            },
+            {
+                name: "Nina",
+                email: "nina@example.com",
+                age: 35,
+                isMarried: true,
+                nationality: "German",
+            },
+            {
+                name: "Yuki",
+                email: "yuki@example.com",
+                age: 22,
+                isMarried: false,
+                nationality: "Japanese",
             },
         ],
+        skipDuplicates: true,
     });
 }
 
